@@ -22,14 +22,31 @@
 
 确保已安装 Python 3.10+。
 
-### 2. 安装依赖
+### 2. 快速启动 (Windows)
+
+直接双击运行根目录下的 `run_server.bat` 脚本。
+该脚本会自动：
+1. 创建虚拟环境 (`backend/venv`)
+2. 安装所需依赖
+3. 启动后端服务
+
+### 3. 手动安装与运行
+
+如果你偏好手动操作：
 
 ```bash
 cd backend
+# 创建虚拟环境
+python -m venv venv
+# 激活虚拟环境
+.\venv\Scripts\activate
+# 安装依赖
 pip install -r requirements.txt
+# 运行
+python -m app.main
 ```
 
-### 3. 配置环境变量
+### 4. 配置环境变量
 
 复制 `backend/.env` 并填入你的 OpenAI API Key。
 
